@@ -1,0 +1,57 @@
+name: Build HTML from Markdown
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'datasets/*.md'
+      - 'templates/*.html'
+      - 'scripts/build.py'
+    paths-ignore:
+      - 'datasets/*.html'
+  pull_request:
+    branches: [ main, master ]
+    paths:
+      - 'datasets/*.md'
+      - 'templates/*.html'
+      - 'scripts/build.py'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+    
+    - name: Build HTML files
+      run: |
+        python scripts/build.py
+    
+    - name: Commit changes
+      if: github.event_name == 'push'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+        git add datasets/*.html
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Auto-generate HTML from Markdown [skip ci]"
+          git push
+        fi
+
