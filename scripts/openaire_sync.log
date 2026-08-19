@@ -1,0 +1,67 @@
+2026-04-29 13:53:02,654 INFO Loaded 39 existing DOIs from ISB-D-*.json
+2026-04-29 13:53:02,654 INFO Fetching search: cryo-EM OR cryo EM OR EMDB OR tomography OR subtomogram
+2026-04-29 13:53:04,610 INFO   ... accumulated unique ids: 200
+2026-04-29 13:53:04,611 INFO Fetching search: SAXS OR SANS OR SASBDB OR NMR OR BMRB OR HDX
+2026-04-29 13:53:25,298 INFO Loaded 39 existing DOIs from ISB-D-*.json
+2026-04-29 13:53:25,298 INFO Fetching search: cryo-EM OR cryo EM OR EMDB OR tomography OR subtomogram
+2026-04-29 13:53:27,184 INFO   ... accumulated unique ids: 200
+2026-04-29 13:53:27,184 INFO Fetching search: SAXS OR SASBDB OR NMR OR BMRB OR HDX
+2026-04-29 13:53:28,533 INFO   ... accumulated unique ids: 233
+2026-04-29 13:53:28,533 INFO Fetching search: SANS OR SASBDB OR scattering OR neutron
+2026-04-29 13:53:29,673 INFO   ... accumulated unique ids: 240
+2026-04-29 13:53:29,673 INFO Fetching search: PDB OR AlphaFold OR structural biology OR integrative
+2026-04-29 13:53:31,602 INFO   ... accumulated unique ids: 428
+2026-04-29 13:53:31,602 INFO Fetching search: XL-MS OR cross-linking OR multimodal OR crystallography
+2026-04-29 13:53:33,299 INFO   ... accumulated unique ids: 572
+2026-04-29 13:53:33,314 INFO After structural keyword filter: 235 records
+2026-04-29 13:53:33,314 INFO New candidates (new DOI): 206
+2026-04-29 13:53:33,314 INFO After --max-new cap: 3
+2026-04-29 13:54:01,649 INFO Loaded 39 existing DOIs from ISB-D-*.json
+2026-04-29 13:54:01,649 INFO Fetching search: cryo-EM OR cryo EM OR EMDB OR tomography OR subtomogram
+2026-04-29 13:54:02,670 INFO   ... accumulated unique ids: 100
+2026-04-29 13:54:02,670 INFO Fetching search: SAXS OR SASBDB OR NMR OR BMRB OR HDX
+2026-04-29 13:54:03,379 INFO   ... accumulated unique ids: 138
+2026-04-29 13:54:03,379 INFO Fetching search: SANS OR SASBDB OR scattering OR neutron
+2026-04-29 13:54:04,002 INFO   ... accumulated unique ids: 145
+2026-04-29 13:54:04,002 INFO Fetching search: PDB OR AlphaFold OR structural biology OR integrative
+2026-04-29 13:54:04,670 INFO   ... accumulated unique ids: 244
+2026-04-29 13:54:04,671 INFO Fetching search: XL-MS OR cross-linking OR multimodal OR crystallography
+2026-04-29 13:54:05,496 INFO   ... accumulated unique ids: 342
+2026-04-29 13:54:05,517 INFO After structural keyword filter: 178 records
+2026-04-29 13:54:05,518 INFO New candidates (new DOI): 177
+2026-04-29 13:54:05,518 INFO After --max-new cap: 0
+2026-04-29 13:56:13,350 INFO Loaded 39 existing DOIs from ISB-D-*.json
+2026-04-29 13:56:13,350 INFO Fetching search: cryo-EM OR cryo EM OR EMDB OR tomography OR subtomogram
+2026-04-29 13:56:16,250 INFO   ... accumulated unique ids: 215
+2026-04-29 13:56:16,252 INFO Fetching search: SAXS OR SASBDB OR NMR OR BMRB OR HDX
+2026-04-29 13:56:17,364 INFO   ... accumulated unique ids: 248
+2026-04-29 13:56:17,365 INFO Fetching search: SANS OR SASBDB OR scattering OR neutron
+2026-04-29 13:56:18,467 INFO   ... accumulated unique ids: 255
+2026-04-29 13:56:18,468 INFO Fetching search: PDB OR AlphaFold OR structural biology OR integrative
+2026-04-29 13:56:30,272 INFO   ... accumulated unique ids: 1497
+2026-04-29 13:56:30,273 INFO Fetching search: XL-MS OR cross-linking OR multimodal OR crystallography
+2026-04-29 13:56:32,089 INFO   ... accumulated unique ids: 1506
+2026-04-29 13:56:32,131 INFO After structural keyword filter: 279 records
+2026-04-29 13:56:32,132 INFO New candidates (new DOI): 245
+2026-04-29 13:56:32,132 INFO After --max-new cap: 10
+2026-04-29 13:56:32,140 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/ISB-D-0036.json
+2026-04-29 13:56:32,140 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/dataset-37.md
+2026-04-29 13:56:32,141 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/ISB-D-0037.json
+2026-04-29 13:56:32,141 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/dataset-38.md
+2026-04-29 13:56:32,141 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/ISB-D-0038.json
+2026-04-29 13:56:32,141 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/dataset-39.md
+2026-04-29 13:56:32,141 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/ISB-D-0039.json
+2026-04-29 13:56:32,142 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/dataset-40.md
+2026-04-29 13:56:32,142 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/ISB-D-0040.json
+2026-04-29 13:56:32,142 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/dataset-41.md
+2026-04-29 13:56:32,142 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/ISB-D-0041.json
+2026-04-29 13:56:32,142 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/dataset-42.md
+2026-04-29 13:56:32,142 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/ISB-D-0042.json
+2026-04-29 13:56:32,143 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/dataset-43.md
+2026-04-29 13:56:32,143 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/ISB-D-0043.json
+2026-04-29 13:56:32,143 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/dataset-44.md
+2026-04-29 13:56:32,143 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/ISB-D-0044.json
+2026-04-29 13:56:32,143 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/dataset-45.md
+2026-04-29 13:56:32,143 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/ISB-D-0045.json
+2026-04-29 13:56:32,143 INFO Wrote /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/dataset-46.md
+2026-04-29 13:56:32,144 INFO Updated /Users/wojciechpotrzebowski/SciLifeLab_SPACE/isb_datasets/datasets/index.json with 10 entries

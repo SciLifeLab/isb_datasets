@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - ISB Datasets</title>
+    <link rel="stylesheet" href="../css/style.css">
+    {% if json_file %}
+    <link rel="alternate" type="application/json" href="{{json_file}}" title="Dataset metadata (JSON)">
+    {% endif %}
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="../images/scilifelab-logo.png" alt="SciLifeLab Logo" class="scilifelab-logo">
+            <h1>ISB Datasets</h1>
+            <p>Integrated Structural Biology Multi-Technique Datasets</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-content">
+            <div class="nav-left">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="dataset-detail">
+            <h2>{{title}}</h2>
+
+            <div class="info-section">
+                <div class="info-row">
+                    <div class="info-label">Unit / Facility</div>
+                    <div class="info-value">{{unit_facility}}</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">System / Target</div>
+                    <div class="info-value">{{system_target}}</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Organism / Source</div>
+                    <div class="info-value">{{organism_source}}</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Approx. Data Collection Years</div>
+                    <div class="info-value">{{data_collection_years}}</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Access / Reuse Status</div>
+                    <div class="info-value">{{access_status}}</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Main Public Repository / Storage</div>
+                    <div class="info-value">{{main_repository}}</div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>Techniques Used</h3>
+                <div class="techniques">
+                    {% for technique in techniques %}
+                    <span class="technique-badge">{{technique}}</span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>Repository Links</h3>
+                {% set ns = namespace(ul_open=false) %}
+                {% for repo in repositories %}
+                    {% if repo.section_heading %}
+                        {% if ns.ul_open %}</ul>{% endif %}
+                        <h4 class="repo-subsection">{{repo.section_heading}}</h4>
+                        <ul class="repo-link-list">
+                        {% set ns.ul_open = true %}
+                    {% else %}
+                        {% if not ns.ul_open %}
+                        <ul class="repo-link-list">
+                        {% set ns.ul_open = true %}
+                        {% endif %}
+                    <li>
+                        <span class="repo-type">{{repo.type}}:</span>
+                        {% if repo.links %}
+                            {% for link in repo.links %}
+                            <a href="{{link.url}}" target="_blank">{{link.text}}</a>{% if link.note %} <span style="color: var(--gray-dark);">{{link.note}}</span>{% endif %}{% if not loop.last %}, {% endif %}
+                            {% endfor %}
+                        {% elif repo.note %}
+                        <span style="color: var(--gray-dark);">{{repo.note}}</span>
+                        {% endif %}
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                {% if ns.ul_open %}</ul>{% endif %}
+            </div>
+
+            {% if publications %}
+            <div class="info-section">
+                <h3>Publications</h3>
+                <ul class="publication-list">
+                    {% for pub in publications %}
+                    <li class="publication-item">
+                        {% if pub.url %}
+                        <a href="{{pub.url}}" target="_blank" class="pub-title">{{pub.title}}</a>
+                        {% else %}
+                        <span class="pub-title">{{pub.title}}</span>
+                        {% endif %}
+                        {% if pub.venue %}
+                        <span class="pub-venue">{{pub.venue}}</span>
+                        {% endif %}
+                        {% if pub.doi %}
+                        <span class="pub-doi">DOI: <a href="https://doi.org/{{pub.doi}}" target="_blank">{{pub.doi}}</a></span>
+                        {% endif %}
+                        {% if pub.pmid %}
+                        <span class="pub-pmid">PubMed: <a href="https://pubmed.ncbi.nlm.nih.gov/{{pub.pmid}}" target="_blank">{{pub.pmid}}</a></span>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            {% if content %}
+            <div class="info-section">
+                {{content|safe}}
+            </div>
+            {% endif %}
+
+            {% if json_file %}
+            <div class="info-section">
+                <h3>Machine-Readable Metadata</h3>
+                <p>
+                    <a href="{{json_file}}" type="application/json" download style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary-color, #0066cc);">
+                        <span style="font-size: 1.1em;">⬇</span>
+                        Download dataset metadata (JSON)
+                    </a>
+                    <span style="color: var(--gray-dark, #666); font-size: 0.9em; margin-left: 8px;">|</span>
+                    <a href="{{json_file}}" type="application/json" style="color: var(--gray-dark, #666); text-decoration: none; font-size: 0.9em;">View raw JSON</a>
+                </p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>ISB Dataset Portal | SciLifeLab</p>
+        </div>
+    </footer>
+</body>
+</html>
+
