@@ -51,7 +51,7 @@ jobs:
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
-          git commit -m "Auto-generate HTML from Markdown [skip ci]"
+          git commit -m "Auto-generate HTML from Markdown"
           git push
         fi
 
